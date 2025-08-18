@@ -1,0 +1,31 @@
+---
+layout: base.liquid
+title: Blog
+permalink: /blog/index.html
+---
+<pre class="ascii jitter-1" aria-hidden="true">
+  .. .. ..  blog  .. .. ..
+         . .. . .   . .
+</pre>
+<div class="right-ascii ghost" aria-hidden="true">.... .... ...</div>
+
+<section class="section">
+  <div class="tour">
+    <div class="tour-head">ALL POSTS</div>
+    <div class="tour-sub">archive</div>
+
+    {% capture DOTS %}........................{% endcapture %}
+    <div class="dl">
+      {% assign posts = collections.post | reverse %}
+      {% for post in posts %}
+      <div class="dl-row">
+        <div class="dl-left">
+          {{ post.date | date: "%d.%m" }} <b>{{ post.data.title }}</b>
+        </div>
+        <div class="dl-dots" aria-hidden="true">{{ DOTS }}</div>
+        <div class="dl-right"><a href="{{ post.url }}">read</a></div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
