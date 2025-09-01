@@ -1,0 +1,12 @@
+---
+permalink: /robots.txt
+eleventyExcludeFromCollections: true
+---
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://erenbatuhanes.com/sitemap.xml
+
+# Crawl-delay (optional, remove if not needed)
+Crawl-delay: 1

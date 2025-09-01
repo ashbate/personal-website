@@ -1,9 +1,10 @@
 ---
 layout: post.liquid
 title: "Sartor: early architecture notes"
-description: "Infra on GCP, automated testing, and why we built it"
+description: "Infrastructure on GCP for AI-driven automated testing. VMs, test orchestration, and stakeholder KPIs for release readiness."
 date: 2025-08-10
 tags: [post]
+keywords: ["Sartor", "AI testing", "GCP", "automated testing", "infrastructure", "DevOps"]
 ---
 
 Quick notes on how we set up **AI-driven automated testing** on GCP:

@@ -125,3 +125,42 @@ hr { border: none; border-top: 1px dotted #000; margin: var(--s3) 0 var(--s2); }
 /* little wobble so it doesn't look machine-perfect */
 .dl-row:nth-child(3n)   { position: relative; left: 1px; }
 .dl-row:nth-child(5n+2) { position: relative; left: -1px; }
+
+/* ===== SEO & Semantic Improvements ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-weight: 700;
+  margin: 0;
+}
+
+h1 { font-size: 1.2em; }
+h2 { font-size: 1.1em; }
+
+.post-description {
+  font-style: italic;
+  opacity: 0.8;
+  margin-bottom: 1em;
+}
+
+.post-content {
+  line-height: 1.6;
+}
+
+time {
+  font-size: 0.9em;
+  opacity: 0.7;
+}
+
+article {
+  margin: var(--s3) 0;
+}
+
+article header {
+  margin-bottom: var(--s3);
+}
+
+article footer {
+  margin-top: var(--s3);
+  padding-top: var(--s2);
+  border-top: 1px dotted #000;
+}

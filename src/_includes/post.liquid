@@ -1,15 +1,24 @@
 ---
 layout: base.liquid
 ---
-<pre class="ascii jitter-1" aria-hidden="true">
-   . . . {{ title }} . . .
-     .    .  .     .  .
-</pre>
-<div class="right-ascii ghost" aria-hidden="true">... : :  ....</div>
+<article>
+  <pre class="ascii jitter-1" aria-hidden="true">
+     . . . {{ title }} . . .
+       .    .  .     .  .
+  </pre>
+  <div class="right-ascii ghost" aria-hidden="true">... : :  ....</div>
 
-<u>{{ title }}</u>
-<br><br>
-{{ content }}
+  <header>
+    <h1 style="text-decoration: underline; margin-bottom: 1em;">{{ title }}</h1>
+    {% if description %}<p class="post-description">{{ description }}</p>{% endif %}
+    <time datetime="{{ date | date: '%Y-%m-%d' }}">{{ date | date: "%B %d, %Y" }}</time>
+  </header>
 
-<br><br>
-<a href="/blog/">← back</a>
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <footer style="margin-top: 2em; padding-top: 1em; border-top: 1px dotted #000;">
+    <a href="/blog/">← back to blog</a>
+  </footer>
+</article>
