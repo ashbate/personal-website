@@ -5,8 +5,17 @@ eleventyExcludeFromCollections: true
 User-agent: *
 Allow: /
 
+# Block sensitive areas
+Disallow: /admin/
+Disallow: /_site/
+Disallow: /src/
+Disallow: /node_modules/
+
 # Sitemap
 Sitemap: https://erenbatuhanes.com/sitemap.xml
 
-# Crawl-delay
+# Crawl-delay for respectful crawling
 Crawl-delay: 1
+
+# Cache directive
+Host: erenbatuhanes.com

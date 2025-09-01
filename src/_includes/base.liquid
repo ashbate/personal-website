@@ -4,28 +4,48 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   
+  <!-- Security and Performance -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff"/>
+  <meta http-equiv="X-Frame-Options" content="DENY"/>
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block"/>
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
+  
+  <!-- Preconnect to external domains -->
+  <link rel="preconnect" href="https://www.googletagmanager.com"/>
+  <link rel="preconnect" href="https://getsartor.com"/>
+  <link rel="preconnect" href="https://github.com"/>
+  
+  <!-- DNS prefetch for external links -->
+  <link rel="dns-prefetch" href="//www.linkedin.com"/>
+  <link rel="dns-prefetch" href="//github.com"/>
+  
   <!-- SEO Meta Tags -->
-  <title>{% if title and title != "Home" %}{{ title }} — Eren Batuhan Es{% else %}Eren Batuhan Es — Product Builder & Automation Engineer{% endif %}</title>
-  <meta name="description" content="{% if description %}{{ description }}{% else %}Eren Batuhan Es builds reliable systems from messy workflows. Founder of Sartor AI testing platform. Automation, clean UX, and making computers do the boring stuff.{% endif %}"/>
+  <title>{% if title and title != "Home" %}{{ title }} — Eren Batuhan Es{% else %}Eren Batuhan Es — AI Testing Platform Founder | Product Builder & Automation Engineer{% endif %}</title>
+  <meta name="description" content="{% if description %}{{ description }}{% else %}Eren Batuhan Es builds reliable systems and AI testing platforms. Founder of Sartor, expert in automation, OCR pipelines, and clean UX. Transform messy workflows into reliable systems.{% endif %}"/>
   <meta name="author" content="Eren Batuhan Es"/>
-  <meta name="keywords" content="Eren Batuhan Es, product builder, automation engineer, AI testing, Sartor, OCR pipeline, software development, Milan"/>
+  <meta name="keywords" content="Eren Batuhan Es, AI testing platform, Sartor, automation engineer, product builder, OCR pipeline, software development, reliable systems, workflow automation, testing platform, AI, machine learning, software engineering, Milan, Italy"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
   
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://erenbatuhanes.com{% if page.url != '/' %}{{ page.url }}{% endif %}"/>
+  <link rel="canonical" href="https://erenbatuhanes.com{% if page.url and page.url != '/' %}{{ page.url | url }}{% endif %}"/>
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="{% if title and title != 'Home' %}article{% else %}website{% endif %}"/>
   <meta property="og:url" content="https://erenbatuhanes.com{% if page.url != '/' %}{{ page.url }}{% endif %}"/>
-  <meta property="og:title" content="{% if title and title != 'Home' %}{{ title }} — Eren Batuhan Es{% else %}Eren Batuhan Es — Product Builder & Automation Engineer{% endif %}"/>
-  <meta property="og:description" content="{% if description %}{{ description }}{% else %}Building reliable systems from messy workflows. Founder of Sartor AI testing platform. Automation, clean UX, and making computers do the boring stuff.{% endif %}"/>
+  <meta property="og:title" content="{% if title and title != 'Home' %}{{ title }} — Eren Batuhan Es{% else %}Eren Batuhan Es — AI Testing Platform Founder | Product Builder{% endif %}"/>
+  <meta property="og:description" content="{% if description %}{{ description }}{% else %}Founder of Sartor AI testing platform. Expert in automation, OCR pipelines, and transforming messy workflows into reliable systems.{% endif %}"/>
   <meta property="og:site_name" content="Eren Batuhan Es"/>
   <meta property="og:locale" content="en_US"/>
+  <meta property="og:image" content="https://erenbatuhanes.com/favicon.ico"/>
+  <meta property="og:image:width" content="256"/>
+  <meta property="og:image:height" content="256"/>
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:url" content="https://erenbatuhanes.com{% if page.url != '/' %}{{ page.url }}{% endif %}"/>
-  <meta property="twitter:title" content="{% if title and title != 'Home' %}{{ title }} — Eren Batuhan Es{% else %}Eren Batuhan Es — Product Builder & Automation Engineer{% endif %}"/>
-  <meta property="twitter:description" content="{% if description %}{{ description }}{% else %}Building reliable systems from messy workflows. Founder of Sartor AI testing platform.{% endif %}"/>
+  <meta property="twitter:title" content="{% if title and title != 'Home' %}{{ title }} — Eren Batuhan Es{% else %}Eren Batuhan Es — AI Testing Platform Founder{% endif %}"/>
+  <meta property="twitter:description" content="{% if description %}{{ description }}{% else %}Founder of Sartor AI testing platform. Expert in automation and transforming workflows into reliable systems.{% endif %}"/>
+  <meta property="twitter:image" content="https://erenbatuhanes.com/favicon.ico"/>
   
   <!-- Favicon and Icons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
@@ -39,26 +59,62 @@
     "url": "https://erenbatuhanes.com",
     "sameAs": [
       "https://github.com/ashbate",
-      "https://www.linkedin.com/in/erenbatuhanes/"
+      "https://www.linkedin.com/in/erenbatuhanes/",
+      "https://getsartor.com"
     ],
-    "jobTitle": "Product Builder & Automation Engineer",
+    "jobTitle": "Founder & Product Builder",
     "worksFor": {
       "@type": "Organization",
-      "name": "Sartor"
+      "name": "Sartor",
+      "url": "https://getsartor.com",
+      "description": "AI-assisted testing platform"
+    },
+    "foundingLocation": {
+      "@type": "Place",
+      "name": "Milan, Italy"
     },
     "alumniOf": {
       "@type": "Organization",
       "name": "Bocconi University"
     },
     "email": "erenbatuhanes@gmail.com",
-    "description": "Product builder who turns messy workflows into reliable systems. Founder of Sartor AI testing platform."
+    "description": "Founder of Sartor AI testing platform. Expert in automation, OCR pipelines, and transforming messy workflows into reliable systems.",
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Software Testing",
+      "Automation Engineering",
+      "OCR Technology",
+      "Product Development",
+      "Workflow Optimization",
+      "System Architecture"
+    ],
+    "memberOf": {
+      "@type": "Organization",
+      "name": "Tech Industry"
+    }
   }
   </script>
 
-  <link rel="stylesheet" href="/style.css?v=1.3"/>
-  <script src="/script.js?v=1.3" defer></script>
+  <link rel="stylesheet" href="/style.css?v=1.4" media="print" onload="this.media='all'; this.onload=null;"/>
+  <noscript><link rel="stylesheet" href="/style.css?v=1.4"/></noscript>
+  <link rel="preload" href="/script.js?v=1.4" as="script"/>
+  <script src="/script.js?v=1.4" defer></script>
+  
+  <!-- Google Analytics -->
+  <!-- Replace G-XXXXXXXXXX with your actual Google Analytics 4 measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', {
+      anonymize_ip: true,
+      cookie_flags: 'secure;samesite=strict'
+    });
+  </script>
 </head>
 <body>
+  <a href="#main" class="skip">Skip to main content</a>
   <div class="container">
     <nav class="nav">
       <a href="/">← home</a> <span class="sep">|</span>
